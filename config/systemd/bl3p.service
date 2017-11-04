@@ -2,7 +2,9 @@
 Description=BL3P
 
 [Service]
-ExecStart=/bin/bash -c "/usr/bin/python /home/roeles/projects/bl3p/code/bl3p.py 1>>/home/archive/data/bl3p/ask.csv 2>>/home/archive/data/bl3p/sell.csv & /usr/bin/python /home/roeles/projects/bl3p/code/bl3p-trades.py >> /home/archive/data/bl3p/trades.csv"
+Type=oneshot
+ExecStart=/bin/true
+RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
