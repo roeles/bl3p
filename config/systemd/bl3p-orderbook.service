@@ -2,12 +2,12 @@
 Description=BL3P Orderbook
 PartOf=bl3p.service
 After=bl3p.service
+StartLimitIntervalSec=0
 
 [Service]
 ExecStart=/bin/bash -c "/usr/bin/python /home/roeles/projects/bl3p/code/bl3p.py 1>>/home/archive/data/bl3p/ask.csv 2>>/home/archive/data/bl3p/sell.csv"
 Restart=always
 RestartSec=1
-StartLimitIntervalSec=0
 
 [Install]
 WantedBy=bl3p.service
