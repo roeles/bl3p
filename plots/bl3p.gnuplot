@@ -21,7 +21,7 @@ set view map
 splot \
 "/home/archive/data/bl3p/ask.csv" using 1:2:4 with pm3d notitle,\
 "/home/archive/data/bl3p/sell.csv" using 1:2:4 with pm3d notitle,\
-"/home/archive/data/bl3p/trades.csv" using 2:3:4:4 with points lt 1 pt 7 ps variable title "Trades"
+"/home/archive/data/bl3p/trades.csv" using 2:3:4:4 with linespoints lt 1 pt 7 ps variable title "Trades"
 
 set xrange [t1e - (1*60*60):t1e]
 replot
